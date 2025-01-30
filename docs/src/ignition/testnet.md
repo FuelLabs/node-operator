@@ -2,65 +2,39 @@
 
 ## Installation
 
-<TextImport
-  file="../installation/index.mdx"
-  comment="install_fuelup"
-  commentType="{/*"
-/>
+To install the Fuel toolchain, you can use the `fuelup-init` script.
+This will install `forc`, `forc-client`, `forc-fmt`, `forc-lsp`, `forc-wallet` as well as `fuel-core` in `~/.fuelup/bin`.
 
-<CodeImport
-  file="../installation/index.mdx"
-  comment="install_fuelup_command"
-  commentType="{/*"
-  lang="sh"
-  trim="true"
-/>
+```sh
+curl https://install.fuel.network | sh
+```
 
-<TextImport
-  file="../counter-dapp/building-a-smart-contract.mdx"
-  comment="install_help"
-  commentType="{/*"
-/>
+> Having problems? Visit the [installation guide](https://docs.fuel.network/guides/installation/) or post your question in our [forum](https://forum.fuel.network/).
+
 
 ## Getting a Sepolia (Ethereum Testnet) API Key
 
-{/*get_ethereum_api_key:example:start*/}
 An API key from any RPC provider that supports the Sepolia network will work. Relayers will help listen to events from the Ethereum network. We recommend either [Infura](https://www.infura.io/) or [Alchemy](https://www.alchemy.com/)
 
 The endpoints should look like the following:
-{/*get_ethereum_api_key:example:end*/}
 
 ### Infura
-
-{/*// ANCHOR: infura_key*/}
 
 ```sh
 https://sepolia.infura.io/v3/{YOUR_API_KEY}
 ```
 
-{/*// ANCHOR_END: infura_key*/}
-
 ### Alchemy
-
-{/*// ANCHOR: alchemy_key*/}
 
 ```sh
 https://eth-sepolia.g.alchemy.com/v2/{YOUR_API_KEY}
 ```
 
-{/*// ANCHOR_END: alchemy_key*/}
-
-{/*get_ethereum_api_key_end:example:start*/}
 Note that using other network endpoints will result in the relayer failing to start.
-{/*get_ethereum_api_key_end:example:end*/}
 
 ## Generating a P2P Key
 
-{/*generate_fuel_p2p_key:example:start*/}
 Generate a new P2P key pairing by running the following command:
-{/*generate_fuel_p2p_key:example:end*/}
-
-{/*// ANCHOR: generate_fuel_p2p_key_command*/}
 
 ```sh
 fuel-core-keygen new --key-type peering
@@ -72,11 +46,7 @@ fuel-core-keygen new --key-type peering
 ### Do not share or lose this private key! Press any key to complete. ###
 ```
 
-{/*// ANCHOR_END: generate_fuel_p2p_key_command*/}
-
-{/*generate_fuel_p2p_key_end:example:start*/}
 Make sure you save this somewhere safe so you don't need to generate a new key pair in the future.
-{/*generate_fuel_p2p_key_end:example:end*/}
 
 ## Chain Configuration
 
@@ -94,9 +64,7 @@ First ensure your environments [open files limit](https://askubuntu.com/question
 ulimit -S -n 32768
 ```
 
-{/*running_a_local_node:example:start*/}
 Finally to put everything together to start the node, run the following command:
-{/*running_a_local_node:example:end*/}
 
 ```sh
 fuel-core run \
@@ -116,28 +84,16 @@ fuel-core run \
 --sync-block-stream-buffer-size 30
 ```
 
-{/*running_a_local_node_end:example:start*/}
 For the full description details of each flag above, run:
-{/*running_a_local_node_end:example:end*/}
-
-{/*// ANCHOR: fuel_core_help_command*/}
 
 ```sh
 fuel-core run --help
 ```
 
-{/*// ANCHOR_END: fuel_core_help_command*/}
-
 ## Connecting to the local node from a browser wallet
 
-{/*connecting_to_local_node:example:start*/}
 To connect to the local node using a browser wallet, import the network address as:
-{/*connecting_to_local_node:example:end*/}
-
-{/*// ANCHOR: connecting_to_local_node_endpoint*/}
 
 ```sh
 http://0.0.0.0:4000/v1/graphql
 ```
-
-{/*// ANCHOR_END: connecting_to_local_node_endpoint*/}
