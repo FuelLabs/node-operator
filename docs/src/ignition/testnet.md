@@ -11,7 +11,6 @@ curl https://install.fuel.network | sh
 
 > Having problems? Visit the [installation guide](https://docs.fuel.network/guides/installation/) or post your question in our [forum](https://forum.fuel.network/).
 
-
 ## Getting a Sepolia (Ethereum Testnet) API Key
 
 An API key from any RPC provider that supports the Sepolia network will work. Relayers will help listen to events from the Ethereum network. We recommend either [Infura](https://www.infura.io/) or [Alchemy](https://www.alchemy.com/)
