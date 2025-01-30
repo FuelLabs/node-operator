@@ -513,4 +513,4 @@ Sidecar client flags:
 Based on material from:
 
 - https://docs.cosmos.network/main/tooling/cosmovisor
-- https://docs.osmosis.zone/networks/join-mainnet/#set-up-cosmovisor
+- https://docs.osmosis.zone/overview/validate/joining-mainnet#set-up-cosmovisor

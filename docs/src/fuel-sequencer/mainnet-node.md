@@ -258,4 +258,4 @@ Here's an example plist file with some placeholder (`[...]`) values that must be
 Based on material from:
 
 - https://docs.cosmos.network/main/tooling/cosmovisor
-- https://docs.osmosis.zone/networks/join-mainnet/#set-up-cosmovisor
+- https://docs.osmosis.zone/overview/validate/joining-mainnet#set-up-cosmovisor
