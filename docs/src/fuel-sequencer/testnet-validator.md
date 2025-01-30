@@ -21,7 +21,7 @@ These components communicate together, so any reconfiguration of the above ports
 - Changes to the **Ethereum ports** need to be reflected in the **Sidecar's runtime flags**.
 
 The minimum requirements for the **Sequencer** and **Sidecar** together are:
- 
+
 - 4 cores
 - 8 GB ram
 - 200GB disk space
@@ -32,7 +32,7 @@ The guide assumes that Golang is installed in order to run Cosmovisor. We recomm
 
 To ensure the highest performance and reliability of the Sequencer infrastructure, **running your own Ethereum Sepolia full node is a requirement**. Avoiding the use of third-party services for Ethereum node operations significantly helps the Sequencer network's liveness. Please note these recommended node configurations:
 
-```
+```bash
 --syncmode=snap
 --gcmode=full
 ```
@@ -216,6 +216,7 @@ LimitNOFILE=4096
 [Install]
 WantedBy=multi-user.target
 ```
+
 </details>
 
 ### Mac
@@ -273,6 +274,7 @@ Here's an example plist file with some placeholder (`[...]`) values that must be
 </dict>
 </plist>
 ```
+
 </details>
 
 ## Run the Sequencer
@@ -314,6 +316,7 @@ Environment="DAEMON_SHUTDOWN_GRACE=15s"
 [Install]
 WantedBy=multi-user.target
 ```
+
 </details>
 
 ### Mac
@@ -380,6 +383,7 @@ Here's an example plist file with some placeholder (`[...]`) values that must be
 </dict>
 </plist>
 ```
+
 </details>
 
 ## Creating an Account
@@ -434,17 +438,17 @@ fuelsequencerd tx staking create-validator path/to/validator.json \
 
 ```json
 {
-	"pubkey": {"@type":"/cosmos.crypto.ed25519.PubKey","key":"<PUBKEY>"},
-	"amount": "1000000000test",
-	"moniker": "<MONIKER>",
-	"identity": "<OPTIONAL-IDENTITY>",
-	"website": "<OPTIONAL-WEBSITE>",
-	"security": "<OPTIONAL-EMAIL>",
-	"details": "<OPTIONAL-DETAILS>",
-	"commission-rate": "0.05",
-	"commission-max-rate": "<MAX-RATE>",
-	"commission-max-change-rate": "<MAX-CHANGE-RATE>",
-	"min-self-delegation": "1"
+ "pubkey": {"@type":"/cosmos.crypto.ed25519.PubKey","key":"<PUBKEY>"},
+ "amount": "1000000000test",
+ "moniker": "<MONIKER>",
+ "identity": "<OPTIONAL-IDENTITY>",
+ "website": "<OPTIONAL-WEBSITE>",
+ "security": "<OPTIONAL-EMAIL>",
+ "details": "<OPTIONAL-DETAILS>",
+ "commission-rate": "0.05",
+ "commission-max-rate": "<MAX-RATE>",
+ "commission-max-change-rate": "<MAX-CHANGE-RATE>",
+ "min-self-delegation": "1"
 }
 ```
 

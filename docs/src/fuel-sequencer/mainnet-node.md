@@ -14,7 +14,7 @@ Unless otherwise configured, at least the following ports should be available:
 - **Sequencer**: 26656, 26657, 9090, 1317
 
 The minimum requirements for the **Sequencer** are:
- 
+
 - 4 cores
 - 8 GB ram
 - 200GB disk space
@@ -183,6 +183,7 @@ Environment="DAEMON_SHUTDOWN_GRACE=15s"
 [Install]
 WantedBy=multi-user.target
 ```
+
 </details>
 
 #### Mac
@@ -249,6 +250,7 @@ Here's an example plist file with some placeholder (`[...]`) values that must be
 </dict>
 </plist>
 ```
+
 </details>
 
 ## References
