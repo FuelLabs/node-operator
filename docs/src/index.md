@@ -15,14 +15,15 @@ Running your own node provides several advantages:
 
 ## Types Of Networks
 
-There are two networks you can currently run the ndoes for 
-1. Fuel Ingition: Fuel V2 layer 2 rollup to go on Ethereum Mainnet. 
+There are two networks you can currently run the ndoes for
+
+1. Fuel Ingition: Fuel V2 layer 2 rollup to go on Ethereum Mainnet.
 
 2. Fuel's proposed cosmos based blcokchain shared sequencer design prioritizes speed and efficiency, rapidly processing cross-chain transactions. Our fast sequencing empowers developers to build versatile, low-latency cross-chain applications, mitigating typical multi-chain fragmentation.
 
 ## Getting Started
 
-Depdning on which network you wish to partiicpate in follow the following sections. 
+Depdning on which network you wish to partiicpate in follow the following sections.
 
 1. [Fuel Ignition](./ignition/index.md)
 <!-- 2. [Fuel Shared Sequencer](./sequencer/index.md) -->
