@@ -9,5 +9,5 @@
 - [Fuel Sequencer](./fuel-sequencer/index.md)
   - [Testnet Node](./fuel-sequencer/testnet-node.md)
   - [Testnet Validator](./fuel-sequencer/testnet-validator.md)
-  - [Mainnet Node](./fuel-sequencer/mainnet-node.md)
+  - [Mainnet Node](./fuel-sequencer/mainnet-node.md) 
   - [Mainnet Validator](./fuel-sequencer/mainnet-validator.md)
