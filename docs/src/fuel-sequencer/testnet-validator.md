@@ -16,9 +16,9 @@ Unless otherwise configured, at least the following ports should be available:
 
 These components communicate together, so any reconfiguration of the above ports likely needs to be reflected on the other respective component as well. Most notably:
 
-- Changes to the **Sequencer ports** need to be reflected in the **Sidecar's runtime flags**.
-- Changes to the **Sidecar port** need to be reflected in the **Sequencer's app config**.
-- Changes to the **Ethereum ports** need to be reflected in the **Sidecar's runtime flags**.
+- Changes to the **Sequencer ports** need to be reflected in the **Sidecars runtime flags**.
+- Changes to the **Sidecar port** need to be reflected in the **Sequencers app config**.
+- Changes to the **Ethereum ports** need to be reflected in the **Sidecars runtime flags**.
 
 The minimum requirements for the **Sequencer** and **Sidecar** together are:
 
