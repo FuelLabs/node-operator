@@ -243,6 +243,7 @@ validator
 validators
 verifiability
 vm
+WebSocket
 whitepaper
 witnessIndex
 witnessesCount

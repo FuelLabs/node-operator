@@ -4,8 +4,6 @@
 
 The validator setup will consist of a Fuel Sequencer, Sidecar, and a connection to an Ethereum Sepolia Node.
 
-![setup](Setup.drawio.png)
-
 ## Prerequisites
 
 Unless otherwise configured, at least the following ports should be available:
