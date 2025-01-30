@@ -1,4 +1,4 @@
-# Running a Fuel Ignition Node
+# Running a Fuel Sequencer Node
 
 Below is a summary of important information to help you get started with running a node for the Layer 2 Fuel Ignition blockchain.
 
@@ -28,6 +28,6 @@ For low API traffic, an AWS m5.large instance should be sufficient. However, we 
 
 Depending on your requirements, you can choose one of the following setups:
 
-1. **[Run a Local Fuel Ignition Node](./local.md):** This setup allows you to run a node that operates solely in your local environment.
-2. **[Connect to the Fuel Ignition Testnet](./testnet.md):** With this setup, your local node will connect and sync with Fuel Ignition.
-3. **[Connect to the Fuel Ignition Mainnet](./mainnet.md):** With this setup, your local node will connect and sync with the Mainnet version of Fuel Ignition.
+1. Filler
+2. **[Connect to the Fuel Ignition Testnet](./testnet-node.md):** With this setup, your local node will connect and sync with Fuel Ignition.
+3. **[Connect to the Fuel Ignition Mainnet](./mainnet-node.md):** With this setup, your local node will connect and sync with the Mainnet version of Fuel Ignition.
