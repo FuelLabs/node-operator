@@ -25,4 +25,4 @@ There are two networks you can currently run the ndoes for
 Depdning on which network you wish to partiicpate in follow the following sections. 
 
 1. [Fuel Ignition](./ignition/index.md)
-2. [Fuel Shared Sequencer](./sequencer/index.md)
+<!-- 2. [Fuel Shared Sequencer](./sequencer/index.md) -->
