@@ -1,33 +1,36 @@
-# Running a Fuel Sequencer Node
+# Running a Fuel Sequencer Node or Validator
 
-Below is a summary of important information to help you get started with running a node for the Layer 2 Fuel Ignition blockchain.
+Below is a summary of key information to help you get started with running a node for the Fuel Sequencer blockchain.
 
-For the latest version of the Fuel client, please visit [this link](https://github.com/FuelLabs/fuel-core).
-
-## Understanding Fuel Ignition's Consensus Mechanism
-
-Fuel Ignition operates on a Proof of Authority (PoA) consensus mechanism. Here’s a brief overview:
-
-**Validators**: In PoA, there are specific entities, known as validators or "authorities", who are given the responsibility to create new blocks and validate transactions. Unlike other consensus mechanisms like Proof of Work (PoW) or Proof of Stake (PoS), where validators are chosen based on computational power or stake, PoA validators are selected based on their reputation and trustworthiness within the network.
-
-**Benefits of PoA**: PoA provides faster transaction times and requires less computational power, making it more energy-efficient. The security and integrity of the network are maintained by the trustworthiness of the selected validators.
+For more details, please refer to the deployment [repository](https://github.com/FuelLabs/fuel-sequencer-deployments/).
 
 ## Hardware Requirements
 
-|  Hardware  | Minimum  | Recommended |
-|------------|----------|-------------|
-|  Processor |  2 Cores |  8 Cores    |
-|  Memory    |  8 GB    |  16 GB      |
-|  Storage   |  500 GB  |  1 TB       |
+| Hardware   | Minimum  | Recommended |
+|------------|---------|-------------|
+| Processor  | 4 Cores | 8 Cores     |
+| Memory     | 8 GB    | 16 GB       |
+| Storage    | 200 GB  | 1 TB        |
 
-For low API traffic, an AWS m5.large instance should be sufficient. However, we recommend an AWS m5.4xlarge instance to match the configuration we use for running the network.
+## Port Configuration
 
-> For routine tasks such as deploying simple contracts and testing contract interactions locally, you do not need to meet all the hardware requirements listed above.
+Unless otherwise configured, the following ports should be available:
+
+- **Sequencer**: 26656, 26657, 9090, 1317  
+- **Sidecar**: 8080  
+- **Ethereum**: 8545, 8546  
+
+These components interact with each other, so any changes to the port configuration must be reflected in the corresponding components. Specifically:
+
+- Changes to **Sequencer ports** must be updated in the **Sidecar's runtime flags**.
+- Changes to the **Sidecar port** must be updated in the **Sequencer's app config**.
+- Changes to **Ethereum ports** must be updated in the **Sidecar's runtime flags**.
 
 ## Getting Started
 
-Depending on your requirements, you can choose one of the following setups:
+Depending on your needs, you can choose one of the following setups:
 
-1. Filler
-2. **[Connect to the Fuel Ignition Testnet](./testnet-node.md):** With this setup, your local node will connect and sync with Fuel Ignition.
-3. **[Connect to the Fuel Ignition Mainnet](./mainnet-node.md):** With this setup, your local node will connect and sync with the Mainnet version of Fuel Ignition.
+1. **[Running a Mainnet Fuel Sequencer Node](./mainnet-node.md):** Your local node will connect to and sync with the mainnet Fuel Sequencer network.
+2. **[Running a Mainnet Fuel Sequencer Validator](./mainnet-validator.md):** Your local node will connect to, sync with, and validate transactions on the mainnet Fuel Sequencer network.
+3. **[Running a Testnet Fuel Sequencer Node](./testnet-node.md):** Your local node will connect to and sync with the testnet Fuel Sequencer network.
+4. **[Running a Testnet Fuel Sequencer Validator](./testnet-validator.md):** Your local node will connect to, sync with, and validate transactions on the testnet Fuel Sequencer network.
