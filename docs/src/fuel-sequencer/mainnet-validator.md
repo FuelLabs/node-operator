@@ -4,7 +4,7 @@
 
 The validator setup will consist of a Fuel Sequencer, Sidecar, and a connection to an Ethereum Mainnet Node.
 
-![fuel sequencer validator](../../../assets/fuel-sequencer-validator.png)
+![fuel sequencer validator](https://raw.githubusercontent.com/FuelLabs/node-operator/refs/heads/main/assets/fuel-sequencer-validator.png)
 
 ## Prerequisites
 
@@ -401,7 +401,7 @@ Adding the `0x` prefix to the address in the first line gives you your Ethereum-
 
 If you have Fuel tokens on the Ethereum mainnet, you can transfer them to your shared sequencer account using the [Etherscan UI](https://etherscan.io/address/0xca0c6B264f0F9958Ec186eb2EAa208966187D866#writeProxyContract).
 
-![Mainnet Etherscan UI](../../../assets/mainnet-etherscan-ui.png)  
+![Mainnet Etherscan UI](https://raw.githubusercontent.com/FuelLabs/node-operator/refs/heads/main/assets/mainnet-etherscan-ui.png)  
 
 To begin, connect your Ethereum wallet containing Fuel tokens by clicking the **"Connect to Web3"** button in the top left. Then, use the **`depositFor (0x36efď6f)`** function to fund your sequencer account.  
 
@@ -414,7 +414,7 @@ Once you are ready, click **"Write"** to approve the transaction. It may take ap
 
 To verify your funds, enter your sequencer account address in the [block explorer](https://fuel-seq.simplystaking.xyz/fuel-mainnet/statesync).
 
-![Mainnet Block Explorer](../../../assets/mainnet-blockexplorer.png)  
+![Mainnet Block Explorer](https://raw.githubusercontent.com/FuelLabs/node-operator/refs/heads/main/assets/mainnet-blockexplorer.png)  
 
 > **⚠ WARNING:** Always test with a small transfer first before bridging FUEL tokens to this Ethereum-compatible address.  
 
