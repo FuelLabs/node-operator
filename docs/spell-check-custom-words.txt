@@ -253,3 +253,5 @@ zkVMs
 zsh
 zshrc
 zstd
+Etherscan
+UI

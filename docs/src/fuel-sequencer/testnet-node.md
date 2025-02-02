@@ -2,17 +2,7 @@
 
 ## Prerequisites
 
-Unless otherwise configured, at least the following ports should be available:
-
-- **Sequencer**: 26656, 26657, 9090, 1317
-
-The minimum requirements for the **Sequencer** are:
-
-- 4 cores
-- 8 GB ram
-- 200GB disk space
-
-The guide assumes that Golang is installed in order to run Cosmovisor. We recommend installing version `1.21+`.
+This guide assumes that Golang is installed to run Cosmovisor. We recommend using version **1.21 or later**. You can download it [here](https://go.dev/dl/).
 
 ## Run the Node
 

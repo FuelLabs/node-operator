@@ -4,27 +4,11 @@
 
 The validator setup will consist of a Fuel Sequencer, Sidecar, and a connection to an Ethereum Sepolia Node.
 
+![fuel sequencer validator](../../../assets/fuel-sequencer-validator.png)
+
 ## Prerequisites
 
-Unless otherwise configured, at least the following ports should be available:
-
-- **Sequencer**: 26656, 26657, 9090, 1317
-- **Sidecar**: 8080
-- **Ethereum**: 8545, 8546
-
-These components communicate together, so any reconfiguration of the above ports likely needs to be reflected on the other respective component as well. Most notably:
-
-- Changes to the **Sequencer ports** need to be reflected in the **Sidecars runtime flags**.
-- Changes to the **Sidecar port** need to be reflected in the **Sequencers app config**.
-- Changes to the **Ethereum ports** need to be reflected in the **Sidecars runtime flags**.
-
-The minimum requirements for the **Sequencer** and **Sidecar** together are:
-
-- 4 cores
-- 8 GB ram
-- 200GB disk space
-
-The guide assumes that Golang is installed in order to run Cosmovisor. We recommend installing version `1.21+`.
+This guide assumes that Golang is installed to run Cosmovisor. We recommend using version **1.21 or later**. You can download it [here](https://go.dev/dl/).
 
 ## Run an Ethereum Sepolia Full Node
 
@@ -413,7 +397,26 @@ human: fuelsequencer
 
 Adding the `0x` prefix to the address in the first line gives you your Ethereum-compatible address, used to deposit into and interact with your Sequencer address from Ethereum. In this case, it's `0xFF8162F37072354EB1E222084DA0D4221E93550F`.
 
-> **WARNING**: always test transfer small amounts first if you are going to bridge TEST tokens to this Ethereum-compatible address.
+## Funding the Account  
+
+If you have Fuel tokens on the testnet Sepolia, you can transfer them to your shared sequencer account using the [Etherscan UI](https://sepolia.etherscan.io/address/0x08Cff7Dc0826819159A5f4De2DF047e275E834C7#writeProxyContract).
+
+![Testnet Etherscan UI](../../../assets/sepolia-etherscan-ui.png)  
+
+To begin, connect your Ethereum wallet containing Fuel tokens by clicking the **"Connect to Web3"** button in the top left. Then, use the **`depositFor (0x36efď6f)`** function to fund your sequencer account.  
+
+Before proceeding, ensure that you have **approved** this contract for the amount of Fuel tokens you intend to transfer in the Fuel token contract.  
+
+- The `amount (uint256)` field should include the number of tokens you wish to send, plus an additional 9 decimal places.  
+- The **recipient address** should be the Ethereum-compatible address you generated earlier (e.g., `0xFF8162F37072354EB1E222084DA0D4221E93550F`).  
+
+Once you are ready, click **"Write"** to approve the transaction. It may take approximately **20 minutes** for the tokens to appear on the other side.  
+
+To verify your funds, enter your sequencer account address in the [block explorer](https://fuel-seq.simplystaking.xyz/fuel-testnet/statesync).
+
+![Testnet Block Explorer](../../../assets/mainnet-blockexplorer.png)  
+
+> **⚠ WARNING:** Always test with a small transfer first before bridging FUEL tokens to this Ethereum-compatible address.  
 
 ## Create the Validator
 
