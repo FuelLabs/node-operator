@@ -1,9 +1,7 @@
 # Running a local Fuel node connected to Testnet using P2P
 
-> Fuel is getting ready for our next major client release, which will upgrade the network from version 0.40.x to 0.41.x. This will be a required upgrade for any node operators. 
-
+> Fuel is getting ready for our next major client release, which will upgrade the network from version 0.40.x to 0.41.x. This will be a required upgrade for any node operators.
 > We are targeting **February 20 for the testnet upgrade**. You can upgrade immediately to the [0.41.6](https://github.com/FuelLabs/fuel-core/releases/tag/v0.41.6) release and sync with the current network using the latest release.
-
 > This update includes several improvements, such as database optimizations for some API queries. To fully benefit from these changes, you will need to re-sync the chain from the genesis block. While this isn't required for operation, it is recommended for optimal performance.
 
 ## Installation
