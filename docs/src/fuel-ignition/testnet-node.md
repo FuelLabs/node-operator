@@ -1,5 +1,11 @@
 # Running a local Fuel node connected to Testnet using P2P
 
+> Fuel is getting ready for our next major client release, which will upgrade the network from version 0.40.x to 0.41.x. This will be a required upgrade for any node operators. 
+
+> We are targeting **February 20 for the testnet upgrade**. You can upgrade immediately to the [0.41.6](https://github.com/FuelLabs/fuel-core/releases/tag/v0.41.6) release and sync with the current network using the latest release.
+
+> This update includes several improvements, such as database optimizations for some API queries. To fully benefit from these changes, you will need to re-sync the chain from the genesis block. While this isn't required for operation, it is recommended for optimal performance.
+
 ## Installation
 
 To install the Fuel toolchain, you can use the `fuelup-init` script.
@@ -74,7 +80,7 @@ fuel-core run \
 --db-path=~/.fuel-sepolia-testnet \
 --snapshot ./your/path/to/chain_config_folder \
 --utxo-validation --poa-instant false --enable-p2p \
---reserved-nodes /dns4/p2p-testnet.fuel.network/tcp/30333/p2p/16Uiu2HAmDxoChB7AheKNvCVpD4PHJwuDGn8rifMBEHmEynGHvHrf \
+--bootstrap-nodes /dnsaddr/testnet.fuel.network \
 --sync-header-batch-size 100 \
 --enable-relayer \
 --relayer-v2-listening-contracts=0x01855B78C1f8868DE70e84507ec735983bf262dA \

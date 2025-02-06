@@ -26,4 +26,4 @@ There are two networks you can currently run the nodes for
 Depending on which network you wish to participate in follow the following sections.
 
 1. [Fuel Ignition](./fuel-ignition/index.md)
-<!-- 2. [Fuel Shared Sequencer](./sequencer/index.md) -->
+2. [Fuel Shared Sequencer](./fuel-sequencer/index.md)
