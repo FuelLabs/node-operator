@@ -82,7 +82,7 @@ fuel-core run \
 --snapshot ./your/path/to/chain_config_folder \
 --utxo-validation --poa-instant false --enable-p2p \
 --bootstrap-nodes /dnsaddr/mainnet.fuel.network \
---sync-header-batch-size 100 \
+--sync-header-batch-size 50 \
 --relayer-v2-listening-contracts=0xAEB0c00D0125A8a788956ade4f4F12Ead9f65DDf \
 --relayer-da-deploy-height=20620434 \
 --relayer-log-page-size=100 \
