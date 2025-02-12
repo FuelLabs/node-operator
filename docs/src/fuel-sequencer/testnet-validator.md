@@ -414,7 +414,7 @@ Once you are ready, click **"Write"** to approve the transaction. It may take ap
 
 To verify your funds, enter your sequencer account address in the [block explorer](https://fuel-seq.simplystaking.xyz/fuel-testnet/statesync).
 
-![Testnet Block Explorer](https://raw.githubusercontent.com/FuelLabs/node-operator/refs/heads/main/assets/testnet-blockexplorer.png)  
+![Testnet Block Explorer](https://raw.githubusercontent.com/FuelLabs/node-operator/refs/heads/main/assets/mainnet-blockexplorer.png)  
 
 > **⚠ WARNING:** Always test with a small transfer first before bridging FUEL tokens to this Ethereum-compatible address.  
 
