@@ -399,11 +399,11 @@ Adding the `0x` prefix to the address in the first line gives you your Ethereum-
 
 ## Funding the Account  
 
-If you have Fuel tokens on the Ethereum mainnet, you can transfer them to your shared sequencer account using the [Etherscan UI](https://etherscan.io/address/0xca0c6B264f0F9958Ec186eb2EAa208966187D866#writeProxyContract).
+If you have Fuel tokens on the Ethereum mainnet, you can transfer them to your shared sequencer account using the [Etherscan UI](https://etherscan.io/address/0xca0c6B264f0F9958Ec186eb2EAa208966187D866#writeProxyContract#F5).
 
 ![Mainnet Etherscan UI](https://raw.githubusercontent.com/FuelLabs/node-operator/refs/heads/main/assets/mainnet-etherscan-ui.png)  
 
-To begin, connect your Ethereum wallet containing Fuel tokens by clicking the **"Connect to Web3"** button in the top left. Then, use the **`depositFor (0x36efď6f)`** function to fund your sequencer account.  
+To begin, connect your Ethereum wallet containing Fuel tokens by clicking the **"Connect to Web3"** button in the top left. Then, use the **`depositFor (0x36efd6f)`** function to fund your sequencer account.  
 
 Before proceeding, ensure that you have **approved** this contract for the amount of Fuel tokens you intend to transfer in the Fuel token contract.  
 

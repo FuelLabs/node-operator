@@ -23,8 +23,8 @@ To ensure the highest performance and reliability of the Sequencer infrastructur
 
 Obtain binary and genesis from this repository:
 
-- Binary from: https://github.com/FuelLabs/fuel-sequencer-deployments/releases/tag/seq-mainnet-1.2-improved-sidecar
-- Genesis from: https://github.com/FuelLabs/fuel-sequencer-deployments/blob/main/seq-mainnet-1/genesis.json
+- Binary from: https://github.com/FuelLabs/fuel-sequencer-deployments/releases/tag/seq-testnet-2-improved-sidecar
+- Genesis from: https://github.com/FuelLabs/fuel-sequencer-deployments/blob/main/seq-testnet-2/genesis.json
 
 Download the right binary based on your architecture to `$GOPATH/bin/` with the name `fuelsequencerd`:
 
@@ -36,13 +36,13 @@ Download the right binary based on your architecture to `$GOPATH/bin/` with the 
 Try the binary:
 
 ```sh
-fuelsequencerd version  # expect seq-mainnet-1.2-improved-sidecar
+fuelsequencerd version  # expect seq-testnet-2-improved-sidecar
 ```
 
 Initialise the node directory, giving your node a meaningful name:
 
 ```sh
-fuelsequencerd init <node-name> --chain-id seq-mainnet-1
+fuelsequencerd init <node-name> --chain-id seq-testnet-2
 ```
 
 Copy the downloaded genesis file to `~/.fuelsequencer/config/genesis.json`:
@@ -151,7 +151,7 @@ To configure State Sync, you will need to set these values in `~/.fuelsequencer/
 - `trust_height = ...`
 - `trust_hash = ...`
 
-The last three values can be obtained from [the explorer](https://fuel-seq.simplystaking.xyz/fuel-mainnet/statesync).
+The last three values can be obtained from [the explorer](https://fuel-seq.simplystaking.xyz/fuel-testnet/statesync).
 
 You will need to specify at least two comma-separated RPC servers in `rpc_servers`. You can either refer to the list of alternate RPC servers above or use the same one twice.
 
@@ -399,11 +399,11 @@ Adding the `0x` prefix to the address in the first line gives you your Ethereum-
 
 ## Funding the Account  
 
-If you have Fuel tokens on the testnet Sepolia, you can transfer them to your shared sequencer account using the [Etherscan UI](https://sepolia.etherscan.io/address/0x08Cff7Dc0826819159A5f4De2DF047e275E834C7#writeProxyContract).
+If you have Fuel tokens on the testnet Sepolia, you can transfer them to your shared sequencer account using the [Etherscan UI](https://sepolia.etherscan.io/address/0x73a77d95806d6c0890262fb55ef7d533d71129ce#writeProxyContract#F6).
 
 ![Testnet Etherscan UI](https://raw.githubusercontent.com/FuelLabs/node-operator/refs/heads/main/assets/sepolia-etherscan-ui.png)  
 
-To begin, connect your Ethereum wallet containing Fuel tokens by clicking the **"Connect to Web3"** button in the top left. Then, use the **`depositFor (0x36efď6f)`** function to fund your sequencer account.  
+To begin, connect your Ethereum wallet containing Fuel tokens by clicking the **"Connect to Web3"** button in the top left. Then, use the **`depositFor (0x36efd6f)`** function to fund your sequencer account.  
 
 Before proceeding, ensure that you have **approved** this contract for the amount of Fuel tokens you intend to transfer in the Fuel token contract.  
 
@@ -414,7 +414,7 @@ Once you are ready, click **"Write"** to approve the transaction. It may take ap
 
 To verify your funds, enter your sequencer account address in the [block explorer](https://fuel-seq.simplystaking.xyz/fuel-testnet/statesync).
 
-![Testnet Block Explorer](https://raw.githubusercontent.com/FuelLabs/node-operator/refs/heads/main/assets/mainnet-blockexplorer.png)  
+![Testnet Block Explorer](https://raw.githubusercontent.com/FuelLabs/node-operator/refs/heads/main/assets/testnet-blockexplorer.png)  
 
 > **⚠ WARNING:** Always test with a small transfer first before bridging FUEL tokens to this Ethereum-compatible address.  
 
@@ -499,4 +499,4 @@ Sidecar client flags:
 Based on material from:
 
 - https://docs.cosmos.network/main/tooling/cosmovisor
-- https://docs.osmosis.zone/overview/validate/joining-mainnet#set-up-cosmovisor
+- https://docs.osmosis.zone/overview/validate/joining-testnet#set-up-cosmovisor
