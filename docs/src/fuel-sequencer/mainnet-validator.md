@@ -410,7 +410,7 @@ Ensure your mainnet Ethereum account (EOA) has sufficient ETH to cover gas fees 
 
 Before proceeding, you must **approve** the Fuel token contract to allow the transfer of tokens.  
 
-In the [Etherscan contract UI](https://etherscan.io/token/0x675b68aa4d9c2d3bb3f0397048e62e6b7192079c#writeProxyContract), use the **`approve (0x095ea7b3)`** function:  
+In the [Fuel Token Etherscan contract UI](https://etherscan.io/token/0x675b68aa4d9c2d3bb3f0397048e62e6b7192079c#writeProxyContract), use the **`approve (0x095ea7b3)`** function:  
 
 - **Spender (`address`)**: Set this to the **Sequencer Interface (Bridge)** address: [`0xca0c6B264f0F9958Ec186eb2EAa208966187D866`](https://etherscan.io/address/0xca0c6B264f0F9958Ec186eb2EAa208966187D866).  
 - **Value (`uint256`)**: Enter the number of tokens to approve, **including 9 additional decimal places**. For unlimited approval, use:  
@@ -425,7 +425,7 @@ In the [Etherscan contract UI](https://etherscan.io/token/0x675b68aa4d9c2d3bb3f0
 
 To bridge tokens, connect your Ethereum wallet by clicking **"Connect to Web3"** in the top left. Then, use the **`depositFor (0x36efd6f)`** function to fund your sequencer account.  
 
-Transfer your FUEL tokens using the [Etherscan UI](https://etherscan.io/address/0xca0c6B264f0F9958Ec186eb2EAa208966187D866).  
+Transfer your FUEL tokens using the [Sequencer Interface (Bridge)Etherscan UI](https://etherscan.io/address/0xca0c6B264f0F9958Ec186eb2EAa208966187D866).  
 
 ![Mainnet Etherscan UI](https://raw.githubusercontent.com/FuelLabs/node-operator/refs/heads/main/assets/mainnet-etherscan-ui.png)  
 
@@ -433,6 +433,8 @@ Transfer your FUEL tokens using the [Etherscan UI](https://etherscan.io/address/
 - **Recipient address**: Enter the Ethereum-compatible address you generated earlier (e.g., `0xFF8162F37072354EB1E222084DA0D4221E93550F`).  
 
 Click **"Write"** to confirm the transaction. The transfer may take **~20 minutes** to process.  
+
+### Verifying Funds
 
 To verify your funds, enter your sequencer account address (i.e. `fuelsequencer1l7qk9umswg65av0zygyymgx5yg0fx4g0dpp2tl`) in the [mainnet block explorer](https://fuel-seq.simplystaking.xyz/fuel-mainnet/statesync).  
 
