@@ -26,6 +26,7 @@ EVM
 Eth
 Ethereum
 Ethereum's
+EOA
 Forc
 FuelLabs
 FuelVM
