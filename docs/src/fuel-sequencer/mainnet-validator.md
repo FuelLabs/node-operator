@@ -397,26 +397,46 @@ human: fuelsequencer
 
 Adding the `0x` prefix to the address in the first line gives you your Ethereum-compatible address, used to deposit into and interact with your Sequencer address from Ethereum. In this case, it's `0xFF8162F37072354EB1E222084DA0D4221E93550F`.
 
-## Funding the Account  
+## Funding the Account
 
-If you have Fuel tokens on the Ethereum mainnet, you can transfer them to your shared sequencer account using the [Etherscan UI](https://etherscan.io/address/0xca0c6B264f0F9958Ec186eb2EAa208966187D866#writeProxyContract#F5).
+Ensure your mainnet Ethereum account (EOA) has sufficient ETH to cover gas fees and FUEL tokens to transfer to your Sequencer account.
+
+### Important Addresses  
+- [**FUEL Token:** `0x675B68AA4d9c2d3BB3F0397048e62E6B7192079c`](https://etherscan.io/address/0x675b68aa4d9c2d3bb3f0397048e62e6b7192079c)  
+- [**Sequencer Interface (Bridge):** `0xca0c6B264f0F9958Ec186eb2EAa208966187D866`](https://etherscan.io/address/0xca0c6B264f0F9958Ec186eb2EAa208966187D866)  
+
+### Token Approval  
+
+Before proceeding, you must **approve** the Fuel token contract to allow the transfer of tokens.  
+
+In the [Etherscan contract UI](https://etherscan.io/token/0x675b68aa4d9c2d3bb3f0397048e62e6b7192079c#writeProxyContract), use the **`approve (0x095ea7b3)`** function:  
+
+- **Spender (`address`)**: Set this to the **Sequencer Interface (Bridge)** address: [`0xca0c6B264f0F9958Ec186eb2EAa208966187D866`](https://etherscan.io/address/0xca0c6B264f0F9958Ec186eb2EAa208966187D866).  
+- **Value (`uint256`)**: Enter the number of tokens to approve, **including 9 additional decimal places**. For unlimited approval, use:  
+  ```
+  0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+  ```
+
+![Mainnet Etherscan Approval UI](https://raw.githubusercontent.com/FuelLabs/node-operator/refs/heads/main/assets/mainnet-etherscan-approval-ui.png)
+
+### Bridging Tokens  
+
+To bridge tokens, connect your Ethereum wallet by clicking **"Connect to Web3"** in the top left. Then, use the **`depositFor (0x36efd6f)`** function to fund your sequencer account.  
+
+Transfer your FUEL tokens using the [Etherscan UI](https://etherscan.io/address/0xca0c6B264f0F9958Ec186eb2EAa208966187D866).  
 
 ![Mainnet Etherscan UI](https://raw.githubusercontent.com/FuelLabs/node-operator/refs/heads/main/assets/mainnet-etherscan-ui.png)  
 
-To begin, connect your Ethereum wallet containing Fuel tokens by clicking the **"Connect to Web3"** button in the top left. Then, use the **`depositFor (0x36efd6f)`** function to fund your sequencer account.  
+- **Amount (`uint256`)**: Enter the number of tokens to send, **including 9 additional decimal places**.  
+- **Recipient address**: Enter the Ethereum-compatible address you generated earlier (e.g., `0xFF8162F37072354EB1E222084DA0D4221E93550F`).  
 
-Before proceeding, ensure that you have **approved** this contract for the amount of Fuel tokens you intend to transfer in the Fuel token contract.  
+Click **"Write"** to confirm the transaction. The transfer may take **~20 minutes** to process.  
 
-- The `amount (uint256)` field should include the number of tokens you wish to send, plus an additional 9 decimal places.  
-- The **recipient address** should be the Ethereum-compatible address you generated earlier (e.g., `0xFF8162F37072354EB1E222084DA0D4221E93550F`).  
-
-Once you are ready, click **"Write"** to approve the transaction. It may take approximately **20 minutes** for the tokens to appear on the other side.  
-
-To verify your funds, enter your sequencer account address in the [block explorer](https://fuel-seq.simplystaking.xyz/fuel-mainnet/statesync).
+To verify your funds, enter your sequencer account address (i.e. `fuelsequencer1l7qk9umswg65av0zygyymgx5yg0fx4g0dpp2tl`) in the [mainnet block explorer](https://fuel-seq.simplystaking.xyz/fuel-mainnet/statesync).  
 
 ![Mainnet Block Explorer](https://raw.githubusercontent.com/FuelLabs/node-operator/refs/heads/main/assets/mainnet-blockexplorer.png)  
 
-> **⚠ WARNING:** Always test with a small transfer first before bridging FUEL tokens to this Ethereum-compatible address.  
+> **⚠ WARNING:** Always test with a small transfer before bridging FUEL tokens.
 
 ## Create the Validator
 
