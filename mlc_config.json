@@ -2,6 +2,12 @@
     "ignorePatterns": [
         {
             "pattern": "infura\\.io"
+        },
+        {
+            "pattern": "etherscan\\.io"
+        },
+        {
+            "pattern": "sepolia\\.etherscan\\.io"
         }
     ]
 }
