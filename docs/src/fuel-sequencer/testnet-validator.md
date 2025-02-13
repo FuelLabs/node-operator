@@ -402,6 +402,7 @@ Adding the `0x` prefix to the address in the first line gives you your Ethereum-
 Ensure your Ethereum account (EOA) has sufficient ETH to cover gas fees.
 
 ### Important Addresses  
+
 - [**FUEL Token:** `0xd7Fc4e8FB2c05567C313f4C9b9e07641a361a550`](https://sepolia.etherscan.io/token/0xd7fc4e8fb2c05567c313f4c9b9e07641a361a550)  
 - [**Sequencer Interface (Bridge):** `0x742C478a1951257E83d3aC8f3DFB3A8e6AB9a2E4`](https://sepolia.etherscan.io/address/0x742C478a1951257E83d3aC8f3DFB3A8e6AB9a2E4)  
 
@@ -421,7 +422,8 @@ In the [Etherscan contract UI](https://sepolia.etherscan.io/token/0xd7fc4e8fb2c0
 
 - **Spender (`address`)**: Set this to the **Sequencer Interface (Bridge)** address: [`0x742C478a1951257E83d3aC8f3DFB3A8e6AB9a2E4`](https://sepolia.etherscan.io/address/0x742C478a1951257E83d3aC8f3DFB3A8e6AB9a2E4).  
 - **Value (`uint256`)**: Enter the number of tokens to approve, **including 9 additional decimal places**. For unlimited approval, use:  
-  ```
+
+  ```sh
   0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
   ```
 

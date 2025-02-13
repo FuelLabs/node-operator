@@ -402,6 +402,7 @@ Adding the `0x` prefix to the address in the first line gives you your Ethereum-
 Ensure your mainnet Ethereum account (EOA) has sufficient ETH to cover gas fees and FUEL tokens to transfer to your Sequencer account.
 
 ### Important Addresses  
+
 - [**FUEL Token:** `0x675B68AA4d9c2d3BB3F0397048e62E6B7192079c`](https://etherscan.io/address/0x675b68aa4d9c2d3bb3f0397048e62e6b7192079c)  
 - [**Sequencer Interface (Bridge):** `0xca0c6B264f0F9958Ec186eb2EAa208966187D866`](https://etherscan.io/address/0xca0c6B264f0F9958Ec186eb2EAa208966187D866)  
 
@@ -413,7 +414,8 @@ In the [Etherscan contract UI](https://etherscan.io/token/0x675b68aa4d9c2d3bb3f0
 
 - **Spender (`address`)**: Set this to the **Sequencer Interface (Bridge)** address: [`0xca0c6B264f0F9958Ec186eb2EAa208966187D866`](https://etherscan.io/address/0xca0c6B264f0F9958Ec186eb2EAa208966187D866).  
 - **Value (`uint256`)**: Enter the number of tokens to approve, **including 9 additional decimal places**. For unlimited approval, use:  
-  ```
+
+  ```sh
   0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
   ```
 
