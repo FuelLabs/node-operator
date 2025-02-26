@@ -433,7 +433,7 @@ In the [Fuel Token Etherscan contract UI](https://sepolia.etherscan.io/token/0xd
 
 To bridge tokens, connect your Ethereum wallet by clicking **"Connect to Web3"** in the top left. Then, use the **`depositFor (0x36efd6f)`** function to fund your sequencer account.  
 
-Transfer your FUEL tokens using the [Sequencer Interface (Bridge) Etherscan UI](https://sepolia.etherscan.io/address/0x73a77d95806d6c0890262fb55ef7d533d71129ce#writeProxyContract).  
+Transfer your FUEL tokens using the [Sequencer Interface (Bridge) Etherscan UI](https://sepolia.etherscan.io/address/0x742C478a1951257E83d3aC8f3DFB3A8e6AB9a2E4#writeProxyContract).  
 
 ![Testnet Etherscan UI](https://raw.githubusercontent.com/FuelLabs/node-operator/refs/heads/main/assets/sepolia-etherscan-ui.png)  
 
