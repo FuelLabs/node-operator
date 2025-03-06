@@ -537,11 +537,11 @@ tx: null
 txhash: AD541CE1DCDBD8638C5DFD3C7AF3A3AAF8B9CD0AF265C3AFD96633CE8FAF4CF4
 ```
 
-![Block Explorer Withdrawal](../../../assets/mainnet-blockexplorer-withdrawal.png)
+![Block Explorer Withdrawal](https://raw.githubusercontent.com/FuelLabs/node-operator/refs/heads/main/assets/mainnet-blockexplorer-withdrawal.png)
 
 After verifying your withdrawal on the shared sequencer explorer, visit [Simply Staking](https://stake.simplystaking.com/fuel) and connect your wallet. Navigate to the **Withdrawal** tab on the right to monitor the progress of your withdrawal.
 
-![Simply Staking Withdrawal](../../../assets/mainnet-simplystaking-withdrawal.png)
+![Simply Staking Withdrawal](https://raw.githubusercontent.com/FuelLabs/node-operator/refs/heads/main/assets/mainnet-simplystaking-withdrawal.png)
 
 Once the 3-day waiting period has passed, the withdrawal will require manual action to pull the funds out, which will take approximately another 3 days to process.
 
