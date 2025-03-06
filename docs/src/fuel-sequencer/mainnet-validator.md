@@ -543,7 +543,7 @@ After verifying your withdrawal on the shared sequencer explorer, visit [Simply 
 
 ![Simply Staking Withdrawal](https://raw.githubusercontent.com/FuelLabs/node-operator/refs/heads/main/assets/mainnet-simplystaking-withdrawal.png)
 
-Once the 3-day waiting period has passed, the withdrawal will require manual action to pull the funds out, which will take approximately another 3 days to process.
+Once the 3-day waiting period has passed, the withdrawal will require manual action to pull the funds out.
 
 <!-- TODO: ![Final Withdrawal Screenshot](pic) -->
 
