@@ -454,8 +454,8 @@ fuelsequencerd keys list
 
 Example output:
 
-```
-- address: fuelsequencer1zzu4804kp6m6whzza6r75g7mnme2ahqkjuw4kf
+```sh
+address: fuelsequencer1zzu4804kp6m6whzza6r75g7mnme2ahqkjuw4kf
   name: my-mainnet-validator
   pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"Al6W+Ttrscm/8njeMOt79T0BOdphfWGXrDLij+O3g19N"}'
   type: local
@@ -491,7 +491,7 @@ fuelsequencerd tx bridge withdraw-to-ethereum 0xd70080dE4535db4A64798a23619Db64f
 
 Review the transaction details and confirm the transaction by typing `yes` when prompted:
 
-```
+```sh
 gas estimate: 106942
 auth_info:
   fee:
@@ -521,7 +521,7 @@ confirm transaction before signing and broadcasting [y/N]:
 
 If the transaction is successful, you will receive a transaction hash, which you can paste and monitor the status of your withdrawal [here](https://fuel-seq.simplystaking.xyz/fuel-mainnet/):
 
-```
+```sh
 code: 0
 codespace: ""
 data: ""

@@ -14,6 +14,9 @@ matrix:
             # Ignore all code blocks
             - open: '(?s)^(?P<open> *`{3,}\s*(\w+\s*,?\s*)+.*?)$'
               close: '^( *`{3,})$'
+            # Ignore inline code
+            - open: '(?P<open>`{1,2})'
+              close: '(?P<close>`{1,2})'
       - pyspelling.filters.markdown:
           markdown_extensions:
             - pymdownx.superfences:
