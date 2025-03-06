@@ -442,6 +442,111 @@ To verify your funds, enter your sequencer account address (i.e. `fuelsequencer1
 
 > **⚠ WARNING:** Always test with a small transfer before bridging FUEL tokens.
 
+## Withdrawals
+
+Withdrawals can be easily initiated through the CLI and will be settled on Ethereum approximately 3 days later, as the commitment and bridge finalizations must be completed first.
+
+Identify the account from which you wish to withdraw. Use the following command to list all previously created account names matching your account address above:
+
+```sh
+fuelsequencerd keys list
+```
+
+Example output:
+
+```sh
+address: fuelsequencer1zzu4804kp6m6whzza6r75g7mnme2ahqkjuw4kf
+  name: my-mainnet-validator
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"Al6W+Ttrscm/8njeMOt79T0BOdphfWGXrDLij+O3g19N"}'
+  type: local
+```
+
+Verify that this is the correct address and account name from which you wish to withdraw.
+
+To initiate the withdrawal, use the following command where `<eth-destination-address>` is any Ethereum address you wish to withdraw to and `<amount-in-fuel>` is the amount of FUEL you wish to withdraw:
+
+Note: The amount in FUEL must include 9 decimal places.
+
+```sh
+fuelsequencerd tx bridge withdraw-to-ethereum <eth-destination-address> <amount-in-fuel> \
+  --from=<key> \
+  --gas-prices=10fuel \
+  --gas=auto \
+  --gas-adjustment 1.5 \
+  --node="https://fuel-rpc.polkachu.com/" \
+  --chain-id="seq-mainnet-1"
+```
+
+For example:
+
+```sh
+fuelsequencerd tx bridge withdraw-to-ethereum 0xd70080dE4535db4A64798a23619Db64fB28fD079 1fuel \
+    --from=my-mainnet-validator \
+    --gas-prices=10fuel \
+    --gas=auto \
+    --gas-adjustment 1.5 \
+    --node="https://fuel-rpc.polkachu.com/" \
+    --chain-id="seq-mainnet-1"
+```
+
+Review the transaction details and confirm the transaction by typing `yes` when prompted:
+
+```sh
+gas estimate: 106942
+auth_info:
+  fee:
+    amount:
+    - amount: "1069420"
+      denom: fuel
+    gas_limit: "106942"
+    granter: ""
+    payer: ""
+  signer_infos: []
+  tip: null
+body:
+  extension_options: []
+  memo: ""
+  messages:
+  - '@type': /fuelsequencer.bridge.v1.MsgWithdrawToEthereum
+    amount:
+      amount: "1"
+      denom: fuel
+    from: fuelsequencer1zzu4804kp6m6whzza6r75g7mnme2ahqkjuw4kf
+    to: 0xd70080dE4535db4A64798a23619Db64fB28fD079
+  non_critical_extension_options: []
+  timeout_height: "0"
+signatures: []
+confirm transaction before signing and broadcasting [y/N]:
+```
+
+If the transaction is successful, you will receive a transaction hash, which you can paste and monitor the status of your withdrawal [here](https://fuel-seq.simplystaking.xyz/fuel-mainnet/):
+
+```sh
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: ""
+timestamp: ""
+tx: null
+txhash: AD541CE1DCDBD8638C5DFD3C7AF3A3AAF8B9CD0AF265C3AFD96633CE8FAF4CF4
+```
+
+![Block Explorer Withdrawal](../../../assets/mainnet-blockexplorer-withdrawal.png)
+
+After verifying your withdrawal on the shared sequencer explorer, visit [Simply Staking](https://stake.simplystaking.com/fuel) and connect your wallet. Navigate to the **Withdrawal** tab on the right to monitor the progress of your withdrawal.
+
+![Simply Staking Withdrawal](../../../assets/mainnet-simplystaking-withdrawal.png)
+
+Once the 3-day waiting period has passed, the withdrawal will require manual action to pull the funds out, which will take approximately another 3 days to process.
+
+<!-- TODO: ![Final Withdrawal Screenshot](pic) -->
+
 ## Create the Validator
 
 To create the validator, a prerequisite is to have at least 1FUEL, with enough extra to pay for gas fees. You can check your balance from the explorer.
