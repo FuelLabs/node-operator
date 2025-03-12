@@ -9,14 +9,27 @@ This guide assumes that Golang is installed to run Cosmovisor. We recommend usin
 Obtain binary and genesis from this repository:
 
 - Binary from: https://github.com/FuelLabs/fuel-sequencer-deployments/releases/tag/seq-mainnet-1.2-improved-sidecar
+  - For example: 
+    - `fuelsequencerd-seq-mainnet-1.2-improved-sidecar-darwin-arm64` for Apple Silicon
+    - `fuelsequencerd-seq-mainnet-1.2-improved-sidecar-darwin-amd64` for Linux x64
 - Genesis from: https://github.com/FuelLabs/fuel-sequencer-deployments/blob/main/seq-mainnet-1/genesis.json
 
 Download the right binary based on your architecture to `$GOPATH/bin/` with the name `fuelsequencerd`:
 
-- `echo $GOPATH` to ensure it exists. If not, `go` might not be installed.
+- `echo $GOPATH` to ensure it exists. If not, `go` might not be installed. 
+- Make sure that your `GOPATH` is set properly in your `.bashrc` or `.zshrc` file. Run `source ~/.bashrc` or `source ~/.zshrc` to apply the changes.
+```bash
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+```
 - `mkdir $GOPATH/bin/` if the directory does not exist.
-- `wget <url/to/binary>` to download the binary, or any equivalent approach.
-- `cp <binary> $GOPATH/bin/fuelsequencerd`
+- `wget <url/to/binary>` to download the binary, or any equivalent approach. For example:
+```bash
+wget https://github.com/FuelLabs/fuel-sequencer-deployments/releases/download/seq-mainnet-1.2-improved-sidecar/fuelsequencerd-seq-mainnet-1.2-improved-sidecar-darwin-arm64
+```
+- `cp <binary> $GOPATH/bin/fuelsequencerd` to copy the binary to the `GOPATH/bin/` directory.
+- `chmod +x $GOPATH/bin/fuelsequencerd` to make the binary executable.
+- `fuelsequencerd version` to verify that the binary is working.
 
 Try the binary:
 
