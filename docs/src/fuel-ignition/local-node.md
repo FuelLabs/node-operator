@@ -7,6 +7,38 @@ There are two types of Fuel networks that can be run:
 1. In-memory network (without persistence)
 2. Local network with persistence
 
+## Using `forc node` to run a Local Node
+
+> If you wish to still use the `fuel-core` binary directly, you can skip this section and continue with the steps below.
+
+Make sure you have the [latest version of `fuelup` installed or updated](https://docs.fuel.network/guides/contract-quickstart/#installation). `forc node` abstracts all the flags and configuration options of the `fuel-core` binary and is intended for ease of use. To run a local node using `forc`, you can use the following command:
+
+```sh
+forc node local
+```
+
+This command will start a local node with the default configuration (with state persistence). The default configuration is highlighted in green at the top of the command output.
+
+If you want to specify a custom configuration, you can use the `--help` flag to see the available options. For example:
+
+```sh
+forc node local --help
+```
+
+### Dry-run mode
+
+Users of this new plugin may want to review the parameters before running the node. To accommodate this, `forc-node` includes a dry-run mode, which can be enabled using:
+
+```sh
+forc-node --dry-run local
+```
+
+Instead of starting the node, this command will print the exact command that would be run, allowing you to verify the parameters beforehand.
+
+## Using `fuel-core` binary to run a local node
+
+If you wish to still use the `fuel-core` binary directly, you can follow the steps below.
+
 ## In-memory local node (without state persistence)
 
 An in-memory node does not persist the blockchain state anywhere, it is only stored in memory as long as the node is active and running.
