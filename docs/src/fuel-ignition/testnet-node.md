@@ -35,6 +35,33 @@ https://eth-sepolia.g.alchemy.com/v2/{YOUR_API_KEY}
 
 Note that using other network endpoints will result in the relayer failing to start.
 
+## Using `forc node` to run a Testnet Node
+
+> If you wish to still use the `fuel-core` binary directly, you can skip this section and continue with the steps below.
+
+Make sure you have the [latest version of `fuelup` installed or updated](https://docs.fuel.network/guides/contract-quickstart/#installation). `forc node` abstracts all the flags and configuration options of the `fuel-core` binary and is intended for ease of use. To run a testnet node using `forc`, you can use the following command:
+
+```sh
+forc node testnet
+```
+
+This command will prompt for two things:
+
+1. You will be asked to create a keypair if you don't already have one.
+2. You will be asked to provide an Ethereum RPC endpoint that you retrieved from the [Getting a Sepolia (Ethereum Testnet) API Key](#getting-a-sepolia-ethereum-testnet-api-key) section above.
+
+The default configuration is highlighted in green at the top of the command output.
+
+If you want to specify a custom configuration, you can use the `--help` flag to see the available options. For example:
+
+```sh
+forc node testnet --help
+```
+
+## Using `fuel-core` binary to run a local node
+
+If you wish to still use the `fuel-core` binary directly, you can follow the steps below.
+
 ## Generating a P2P Key
 
 Generate a new P2P key pairing by running the following command:
