@@ -58,6 +58,16 @@ If you want to specify a custom configuration, you can use the `--help` flag to 
 forc node testnet --help
 ```
 
+### Dry-run mode
+
+Users of this new plugin may want to review the parameters before running the node. To accommodate this, `forc-node` includes a dry-run mode, which can be enabled using:
+
+```sh
+forc-node --dry-run testnet
+```
+
+Instead of starting the node, this command will print the exact command that would be run, allowing you to verify the parameters beforehand.
+
 ## Using `fuel-core` binary to run a local node
 
 If you wish to still use the `fuel-core` binary directly, you can follow the steps below.
