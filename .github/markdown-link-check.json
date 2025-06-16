@@ -2,6 +2,12 @@
   "ignorePatterns": [
     {
       "pattern": "https://askubuntu.com/questions/162229/how-do-i-increase-the-open-files-limit-for-a-non-root-user"
+    },
+    {
+      "pattern": "https://www\\.infura\\.io/.*"
+    },
+    {
+      "pattern": "https://(sepolia\\.)?etherscan\\.io/.*"
     }
   ]
 } 
