@@ -23,10 +23,10 @@ To ensure the highest performance and reliability of the Sequencer infrastructur
 
 Obtain binary and genesis from this repository:
 
-- Binary from: https://github.com/FuelLabs/fuel-sequencer-deployments/releases/tag/seq-testnet-2-improved-sidecar
+- Binary from: https://github.com/FuelLabs/fuel-sequencer-deployments/releases/tag/seq-testnet-2.2
   - For example:
-    - `fuelsequencerd-seq-testnet-2-improved-sidecar-darwin-arm64` for Apple Silicon
-    - `fuelsequencerd-seq-testnet-2-improved-sidecar-darwin-amd64` for Linux x64
+    - `fuelsequencerd-seq-testnet-2.2-darwin-arm64` for Apple Silicon
+    - `fuelsequencerd-seq-testnet-2.2-darwin-amd64` for Linux x64
 - Genesis from: https://github.com/FuelLabs/fuel-sequencer-deployments/blob/main/seq-testnet-2/genesis.json
 
 Download the right binary based on your architecture to `$GOPATH/bin/` with the name `fuelsequencerd`:
@@ -43,7 +43,7 @@ export PATH=$PATH:$GOPATH/bin
 - `wget <url/to/binary>` to download the binary, or any equivalent approach. For example:
 
 ```bash
-wget https://github.com/FuelLabs/fuel-sequencer-deployments/releases/download/seq-testnet-2-improved-sidecar/fuelsequencerd-seq-testnet-2-improved-sidecar-darwin-arm64
+wget https://github.com/FuelLabs/fuel-sequencer-deployments/releases/download/seq-testnet-2.2/fuelsequencerd-seq-testnet-2.2-darwin-arm64
 ```
 
 - `cp <binary> $GOPATH/bin/fuelsequencerd` to copy the binary to the `GOPATH/bin/` directory.
@@ -53,7 +53,7 @@ wget https://github.com/FuelLabs/fuel-sequencer-deployments/releases/download/se
 Try the binary:
 
 ```sh
-fuelsequencerd version  # expect seq-testnet-2-improved-sidecar
+fuelsequencerd version  # expect seq-testnet-2.2
 ```
 
 Initialise the node directory, giving your node a meaningful name:
