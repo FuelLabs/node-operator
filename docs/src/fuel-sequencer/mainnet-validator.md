@@ -23,10 +23,10 @@ To ensure the highest performance and reliability of the Sequencer infrastructur
 
 Obtain binary and genesis from this repository:
 
-- Binary from: https://github.com/FuelLabs/fuel-sequencer-deployments/releases/tag/seq-mainnet-1.2-improved-sidecar
+- Binary from: https://github.com/FuelLabs/fuel-sequencer-deployments/releases/tag/seq-mainnet-1.3.2
   - For example:
-    - `fuelsequencerd-seq-mainnet-1.2-improved-sidecar-darwin-arm64` for Apple Silicon
-    - `fuelsequencerd-seq-mainnet-1.2-improved-sidecar-darwin-amd64` for Linux x64
+    - `fuelsequencerd-seq-mainnet-1.3.2-darwin-arm64` for Apple Silicon
+    - `fuelsequencerd-seq-mainnet-1.3.2-darwin-amd64` for Linux x64
 - Genesis from: https://github.com/FuelLabs/fuel-sequencer-deployments/blob/main/seq-mainnet-1/genesis.json
 
 Download the right binary based on your architecture to `$GOPATH/bin/` with the name `fuelsequencerd`:
@@ -43,7 +43,7 @@ export PATH=$PATH:$GOPATH/bin
 - `wget <url/to/binary>` to download the binary, or any equivalent approach. For example:
 
 ```bash
-wget https://github.com/FuelLabs/fuel-sequencer-deployments/releases/download/seq-mainnet-1.2-improved-sidecar/fuelsequencerd-seq-mainnet-1.2-improved-sidecar-darwin-arm64
+wget https://github.com/FuelLabs/fuel-sequencer-deployments/releases/download/seq-mainnet-1.3.2/fuelsequencerd-seq-mainnet-1.3.2-darwin-arm64
 ```
 
 - `cp <binary> $GOPATH/bin/fuelsequencerd` to copy the binary to the `GOPATH/bin/` directory.
@@ -53,7 +53,7 @@ wget https://github.com/FuelLabs/fuel-sequencer-deployments/releases/download/se
 Try the binary:
 
 ```sh
-fuelsequencerd version  # expect seq-mainnet-1.2-improved-sidecar
+fuelsequencerd version  # expect seq-mainnet-1.3.2
 ```
 
 Initialise the node directory, giving your node a meaningful name:
@@ -639,6 +639,12 @@ Sidecar client flags:
 
 - `sidecar_grpc_url`: the sidecar's gRPC endpoint.
 - `query_timeout`: how long to wait before the request times out.
+
+## Bridge Event Validation and Sequencer Consensus
+
+Validators process specific event types emitted by the Ethereum bridge contracts, each mapped to a whitelisted message type. The Sidecar provides these events to the Sequencer app using dedicated handlers for each message type, streamlining validation and processing.
+
+Proto-encoding of authorization transactions is handled by the Sequencer app, resulting in lower gas costs and improved efficiency. The system preserves all security guarantees, with validators participating in consensus on the ordering and inclusion of these events.
 
 ## References
 

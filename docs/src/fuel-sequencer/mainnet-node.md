@@ -8,10 +8,10 @@ This guide assumes that Golang is installed to run Cosmovisor. We recommend usin
 
 Obtain binary and genesis from this repository:
 
-- Binary from: https://github.com/FuelLabs/fuel-sequencer-deployments/releases/tag/seq-mainnet-1.2-improved-sidecar
+- Binary from: https://github.com/FuelLabs/fuel-sequencer-deployments/releases/tag/seq-mainnet-1.3.2
   - For example:
-    - `fuelsequencerd-seq-mainnet-1.2-improved-sidecar-darwin-arm64` for Apple Silicon
-    - `fuelsequencerd-seq-mainnet-1.2-improved-sidecar-darwin-amd64` for Linux x64
+    - `fuelsequencerd-seq-mainnet-1.3.2-darwin-arm64` for Apple Silicon
+    - `fuelsequencerd-seq-mainnet-1.3.2-darwin-amd64` for Linux x64
 - Genesis from: https://github.com/FuelLabs/fuel-sequencer-deployments/blob/main/seq-mainnet-1/genesis.json
 
 Download the right binary based on your architecture to `$GOPATH/bin/` with the name `fuelsequencerd`:
@@ -28,7 +28,7 @@ export PATH=$PATH:$GOPATH/bin
 - `wget <url/to/binary>` to download the binary, or any equivalent approach. For example:
 
 ```bash
-wget https://github.com/FuelLabs/fuel-sequencer-deployments/releases/download/seq-mainnet-1.2-improved-sidecar/fuelsequencerd-seq-mainnet-1.2-improved-sidecar-darwin-arm64
+wget https://github.com/FuelLabs/fuel-sequencer-deployments/releases/download/seq-mainnet-1.3.2/fuelsequencerd-seq-mainnet-1.3.2-darwin-arm64
 ```
 
 - `cp <binary> $GOPATH/bin/fuelsequencerd` to copy the binary to the `GOPATH/bin/` directory.
@@ -38,7 +38,7 @@ wget https://github.com/FuelLabs/fuel-sequencer-deployments/releases/download/se
 Try the binary:
 
 ```sh
-fuelsequencerd version  # expect seq-mainnet-1.2-improved-sidecar
+fuelsequencerd version  # expect seq-mainnet-1.3.2
 ```
 
 Initialise the node directory, giving your node a meaningful name:
@@ -252,6 +252,12 @@ Here's an example plist file with some placeholder (`[...]`) values that must be
 ```
 
 </details>
+
+## Ethereum Bridge Event Handling
+
+The Sidecar subscribes to a limited set of specific events emitted by the Ethereum bridge contracts. Each event type corresponds directly to a whitelisted message type, eliminating the need for generic authorization wrappers. The Sidecar implements dedicated handlers for each event type, ensuring efficient and secure processing of Ethereum-originated operations.
+
+Proto-encoding of authorization transactions is performed by the Sequencer app, not the Ethereum contracts, significantly reducing gas costs and computational overhead. This architecture maintains all original security guarantees while optimizing for cost and efficiency.
 
 ## References
 
